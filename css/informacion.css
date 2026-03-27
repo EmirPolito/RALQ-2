@@ -1,0 +1,110 @@
+/* Estilos generales */
+:root {
+    --verdeclaro: #86b499;
+    --verdeobscuro: #86b499;
+    --gris: #9D9D9D;
+    --gris-claro: #f2f2e6;
+    --blanco: #ffffff;
+    --verde-claro: rgb(209, 239, 200);
+    --negro: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Krub", sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+.contenido-laboratorio {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contenido-laboratorio h2 {
+    font-size: 24px;
+    color: #000;
+    margin-top: 20px;
+}
+
+.contenido-laboratorio h3 {
+    font-size: 20px;
+    color: #00e600;
+    margin-top: 15px;
+}
+
+.contenido-laboratorio p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.contenido-laboratorio ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.contenido-laboratorio ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contenido-laboratorio ul li strong {
+    color: #00e682;
+}
+
+/* Estilo para las imágenes del laboratorio */
+.laboratorio-imagen {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.laboratorio-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sección de contenido del laboratorio */
+.laboratorio-info h2, .laboratorio-info h3 {
+    font-size: 24px;
+    color: #000;
+    margin-top: 20px;
+}
+
+.laboratorio-info ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.laboratorio-info ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.laboratorio-info ul li strong {
+    color: #5f9d5d;
+}
+
+.contenido-laboratorio p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    padding-left: 20px; /* Esto alinea el texto de los párrafos con los elementos de lista */
+}
+

@@ -1,0 +1,81 @@
+/* Estilos para el contenedor del icono de usuario */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el icono de usuario */
+.user-icon {
+    width: 30px;  /* Aumento el tamaño del icono */
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #45614f;
+    padding: 2px;
+    transition: border-color 0.3s;
+}
+
+/* Cambio de color en el borde al pasar el ratón */
+.user-icon:hover {
+    border-color: #3a4e42;
+}
+
+/* Estilos para la ventana emergente */
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 70px;  /* Distancia de la ventana emergente respecto al icono */
+    right: 0;
+    background-color: #ffffff80;  /* Fondo oscuro para contraste */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Sombra más suave */
+    border-radius: 8px;
+    width: 250px;  /* Aumento el ancho de la ventana emergente */
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 10;
+    opacity: 0;  /* Inicialmente invisible */
+    visibility: hidden;  /* Inicialmente oculta */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Transición suave */
+}
+
+/* Mostrar la ventana emergente cuando se activa */
+.user-dropdown.show {
+    display: block;
+    opacity: 1;  /* Cuando se muestra, la ventana es visible */
+    visibility: visible;  /* Hacemos visible el menú */
+    transition: opacity 0.3s ease, visibility 0s 0s; /* Sin retraso en la transición */
+}
+
+/* Estilo para el texto del nombre de usuario */
+.user-dropdown p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1f1f1f;  /* Cambiar el texto a blanco */
+}
+
+.botn-a {
+    margin: 10px;
+}
+
+/* Estilos para los enlaces dentro de la ventana emergente */
+.user-dropdown a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #fff;  /* Cambiar el color del texto a blanco */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #444;  /* Separación sutil entre los enlaces */
+}
+
+/* Eliminar el borde en el último enlace */
+.user-dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Cambio de color al pasar el ratón */
+.user-dropdown a:hover {
+    background-color: #555;  /* Cambio el color de fondo en hover */
+    color: #fff;  /* Mantener el color blanco al hacer hover */
+}

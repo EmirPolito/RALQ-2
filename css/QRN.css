@@ -1,0 +1,380 @@
+:root {
+    --verdeclaro: #86b499;
+    --verdeobscuro: #45614f;
+    --gris: #9D9D9D;
+    --gris-claro: #f8f9fa;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Krub", sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------- ENCABEZADO --------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris-claro);
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+}
+
+
+/* boton voler///////////////////// */
+
+.volver-boton {
+    background: none; /* Elimina cualquier fondo */
+    border: none; /* Elimina bordes si los hay */
+    padding: 0; /* Elimina espacios extras */
+    display: flex; /* Mantiene alineado con el logo */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.volver-boton img {
+    height: 40px; /* Ajusta el tamaño de la flecha */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.volver-boton img:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+/* --------------------------------botones parte superior derecha----------------------------------------- */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+.header-right p {
+    font-size: 1.4rem;
+    color: var(--verdeobscuro);
+    margin-right: 5px; /* Espacio antes del botón */
+}
+
+.header-right a {
+    background-color: var(--verdeobscuro); /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+.header-right a:hover {
+    background-color: var(--verdeclaro); /* Fondo más claro en hover */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+.header-right a:last-child {
+    background-color: #5f775f; /* Color diferente para "Inicia sesión" */
+}
+
+/* ------------------------------------------------------ */
+
+
+header nav a {
+    background-color: var(--verdeobscuro);
+    color: var(--blanco);
+    padding: 10px 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--verdeclaro);
+    transform: scale(1.05);
+}
+
+/* --------------------- SECCIÓN HERO --------------------- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--gris-claro); */
+    background: linear-gradient(to right, #cfe2c5, #b2d1ce, #a6c9df);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* --------------------- MENÚ --------------------- */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: var(--verdeclaro);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------- SECCIÓN INFORMACIÓN --------------------- */
+.informacion {
+    background-color: var(--verdeclaro); 
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.informacion section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Manejo de imágenes dentro de la información */
+.informacion img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Títulos llamativos */
+.informacion h2 {
+    color: var(--verdeobscuro);
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Listas con mejor formato */
+.informacion ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.informacion ul li {
+    padding: 10px 0;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.informacion ul li::before {
+    content: "✔";
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/*-------------------PIE DE PÁGINA-------------------*/
+.pie-pagina {
+    background-color: #1f1f1f;
+    color: var(--blanco);
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contactos {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding-right: 2rem; /* Espacio a la derecha */
+  }
+  
+  .colaboradores {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding: 0 2rem; /* Espacio a ambos lados */
+  }
+  
+  .imagen-footer {
+    max-width: 200px;
+    margin-left: auto;
+    width: 33%; /* Se toma un tercio del ancho */
+    display: block;
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .pie-pagina {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contactos, .colaboradores, .imagen-footer {
+      max-width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .imagen-footer {
+      margin: 0 auto;
+    }
+  }
+
+/* --------------------- VENTANA MODAL --------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--blanco);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--gris);
+    /* tamaño */
+    width: 50%; 
+    /* tamaño */
+    max-width: 400px;
+    border-radius: 10px;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: var(--negro);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--gris);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .informacion {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

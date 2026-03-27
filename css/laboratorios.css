@@ -1,0 +1,293 @@
+:root {
+    --verdeclaro: #86b499;
+    --verdeobscuro: #86b499;
+    --gris: #9D9D9D;
+    --gris-claro: #f2f2e6;
+    --blanco: #ffffff;
+    --verde-claro: rgb(209, 239, 200);
+    --negro: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Krub", sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------------------ENCABEZADO-----------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+}
+
+
+/* boton voler///////////////////// */
+
+.volver-boton {
+    background: none; /* Elimina cualquier fondo */
+    border: none; /* Elimina bordes si los hay */
+    padding: 0; /* Elimina espacios extras */
+    display: flex; /* Mantiene alineado con el logo */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.volver-boton img {
+    height: 40px; /* Ajusta el tamaño de la flecha */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.volver-boton img:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* botones parte superior derecha----------------------------------------- */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+.header-right p {
+    font-size: 1.4rem;
+    color: var(--verdeobscuro);
+    margin-right: 5px; /* Espacio antes del botón */
+}
+
+.header-right a {
+    background-color: var(--verdeobscuro); /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/*---------------------------SUB-ENCABEZADO-----------------------------*/
+/*--------------------------- SECCIÓN HERO -----------------------------*/
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+}
+
+
+
+/*---------------------------ESTILO PARA LOS BOTONES (Ayuda, Servicios, Blog)-----------------------------*/
+header nav a {
+    background-color: #45614f; /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--verdeclaro); /* Fondo verde claro en hover */
+    transform: scale(1.05); /* Efecto de escala en hover */
+}
+
+/* Aseguramos que los botones se vean bien en dispositivos pequeños */
+@media (max-width: 768px) {
+    .encabezado-delgado h1 {
+        font-size: 1.8em; /* Reducir tamaño en pantallas pequeñas */
+    }
+}
+
+
+
+
+/*---------------------------MENÚ-----------------------------*/
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #86b499;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #86b499;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/*-------------------PIE DE PÁGINA-------------------*/
+.pie-pagina {
+    background-color: #1f1f1f;
+    color: var(--blanco);
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contactos {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding-right: 2rem; /* Espacio a la derecha */
+  }
+  
+  .colaboradores {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding: 0 2rem; /* Espacio a ambos lados */
+  }
+  
+  .imagen-footer {
+    max-width: 200px;
+    margin-left: auto;
+    width: 33%; /* Se toma un tercio del ancho */
+    display: block;
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .pie-pagina {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contactos, .colaboradores, .imagen-footer {
+      max-width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .imagen-footer {
+      margin: 0 auto;
+    }
+  }
+
+/*---------------------------RESPONSIVE DESIGN-----------------------------*/
+
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

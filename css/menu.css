@@ -1,0 +1,289 @@
+:root {
+    --verdeclaro: #86b499;
+    --verdeobscuro: #86b499;
+    --gris: #9D9D9D;
+    --gris-claro: #ffffff;
+    --blanco: #ffffff;
+    --verde-claro: rgb(209, 239, 200);
+    --negro: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Krub", sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+/* --------------------- ENCABEZADO --------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris-claro);
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 10px;
+}
+
+
+/* boton voler///////////////////// */
+
+.volver-boton {
+    background: none; /* Elimina cualquier fondo */
+    border: none; /* Elimina bordes si los hay */
+    padding: 0; /* Elimina espacios extras */
+    display: flex; /* Mantiene alineado con el logo */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.volver-boton img {
+    height: 40px; /* Ajusta el tamaño de la flecha */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.volver-boton img:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+/* --------------------------------botones parte superior derecha----------------------------------------- */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+.header-right p {
+    font-size: 1.4rem;
+    color: var(--verdeobscuro);
+    margin-right: 5px; /* Espacio antes del botón */
+    font-weight: bold;
+}
+
+.header-right a {
+    background-color: var(--verdeobscuro); /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Asegura que todos los botones tengan la misma altura */
+}
+
+.header-right a:hover {
+    background-color: var(--verdeclaro); /* Fondo más claro en hover */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+.header-right a:last-child {
+    background-color: #5f775f; /* Color diferente para "Inicia sesión" */
+}
+
+.header-right a img {
+    width: 30px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción */
+}
+
+.icono-red {
+    
+    background-color: var(--verdeclaro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-red img {
+    width: 24px;
+    height: auto;
+    margin-top: 0; /* Eliminado el margen superior para correcta alineación */
+}
+
+.icono-usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verdeobscuro);
+    color: white;
+}
+
+
+
+/* ------------------------------------------------------ */
+
+
+header nav a {
+    background-color: var(--verdeobscuro);
+    color: var(--blanco);
+    padding: 10px 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--verdeclaro);
+    transform: scale(1.05);
+}
+
+/*---------------------------SUB-ENCABEZADO-----------------------------*/
+
+.encabezado-delgado {
+    background-image: url('../img/fondomenu.png'); /* Ajusta la ruta si es necesario */
+    background-size: cover; /* Asegura que cubra el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 300px; /* Ajusta la altura según lo necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+
+.encabezado-delgado h1 {
+    color: white; /* Letras blancas */
+    padding: 10px 30px; /* Mayor espacio alrededor del texto */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    margin: 0; /* Elimina el margen por defecto */
+    text-align: center; /* Centra el texto */
+    font-size: 2em; /* Un tamaño de texto más grande */
+}
+
+
+/*---------------------------MENÚ-----------------------------*/
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #86b499;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #86b499;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+
+
+/*---------------------------RESPONSIVE DESIGN-----------------------------*/
+
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*-------------------PIE DE PÁGINA-------------------*/
+.pie-pagina {
+    background-color: #1f1f1f;
+    color: var(--blanco);
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contactos {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding-right: 2rem; /* Espacio a la derecha */
+  }
+  
+  .colaboradores {
+    max-width: 33%; /* Se toma un tercio del ancho */
+    padding: 0 2rem; /* Espacio a ambos lados */
+  }
+  
+  .imagen-footer {
+    max-width: 200px;
+    margin-left: auto;
+    width: 33%; /* Se toma un tercio del ancho */
+    display: block;
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .pie-pagina {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contactos, .colaboradores, .imagen-footer {
+      max-width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .imagen-footer {
+      margin: 0 auto;
+    }
+  }

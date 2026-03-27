@@ -1,0 +1,26 @@
+/* ANIMACIONES------------------------- */
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Elementos ocultos por defecto */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+  /* Cuando el elemento es visible */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
